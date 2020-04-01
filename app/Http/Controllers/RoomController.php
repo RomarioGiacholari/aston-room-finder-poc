@@ -54,4 +54,11 @@ class RoomController extends Controller
 
         return view('rooms.booked', ['viewModel' => $viewModel]);
     }
+    public function details()
+    {
+        $viewModel = new stdClass;
+        $viewModel->pageTitle = "Room details";
+
+        return view('rooms.show', ['viewModel' => $viewModel]);
+    }
 }

@@ -4,7 +4,7 @@
 <div class="container">
     <h1>
         Home |
-        <a href="{{ route('rooms.create') }}" role="button" class="btn btn-lg btn-success add-button mr-auto" title="Book a room"><i class="fa fa-plus" aria-hidden="true"></i></a>
+        <a href="{{ route('rooms.index') }}" role="button" class="btn btn-lg btn-success add-button mr-auto" title="Book a room"><i class="fa fa-plus" aria-hidden="true"></i></a>
     </h1>
     <hr />
     <div class="row">

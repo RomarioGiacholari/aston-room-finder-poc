@@ -7,10 +7,11 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'room finder') }}</title>
+    <title>{{ config('app.name', 'room finder') }} | @yield('title')</title>
 
     <!-- Scripts -->
     <script src="{{ secure_asset('js/app.js') }}" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -34,7 +35,13 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a href="#" role="button" class="nav-link btn btn-sm btn-success text-white">Book a room</a>
+                            <a href="{{ route('rooms.home') }}" class="nav-link">home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('rooms.booked') }}" class="nav-link">bookings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('rooms.index') }}" class="nav-link">rooms</a>
                         </li>
                     </ul>
 

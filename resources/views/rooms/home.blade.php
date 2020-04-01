@@ -1,6 +1,12 @@
 @extends('layouts.app')
+@section('title', $viewModel->pageTitle)
 @section('content')
 <div class="container">
+    <h1>
+        Home |
+        <a href="{{ route('rooms.create') }}" role="button" class="btn btn-lg btn-success add-button mr-auto" title="Book a room"><i class="fa fa-plus" aria-hidden="true"></i></a>
+    </h1>
+    <hr />
     <div class="row">
         <div class="col-md-6">
             <canvas id="radar"></canvas>

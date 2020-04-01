@@ -14,9 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect(route('rooms.home'));
 });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('rooms/home', 'RoomController@home')->name('rooms.home');
+Route::get('rooms/booked', 'RoomController@booked')->name('rooms.booked');
+Route::resource('rooms', 'RoomController');

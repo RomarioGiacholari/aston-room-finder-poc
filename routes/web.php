@@ -23,3 +23,5 @@ Route::get('rooms/home', 'RoomController@home')->name('rooms.home');
 Route::get('rooms/booked', 'RoomController@booked')->name('rooms.booked');
 Route::get('rooms/details', 'RoomController@details')->name('rooms.details');
 Route::resource('rooms', 'RoomController');
+
+Route::get('/support', 'SupportController@index')->name('support.index');
